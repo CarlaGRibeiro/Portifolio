@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carla Ribeiro</title>
     <link rel="stylesheet" href="./style/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
-    
+
     <header>
-        
-    </header>
-
-    <main>
         <div class="perfil">
-
         </div>
         <section class="presentation">
             <h1>Carla Ribeiro</h1>
-            <p>Desenvolvedora, graduada em análise e desenvolvimento de sistemas.  </p>
+            <p>Desenvolvedora, graduada em análise e desenvolvimento de sistemas. </p>
         </section>
+    </header>
+    <main>
+        <section id="container-projects">
 
-        <section class="container-projects">
-            <h3>Projetos</h3>
-            <div class="projects">
+            <button id="mostrar">
+                <h3>Projetos</h3>
+            </button>
+            <div id="projectsList" class="projectsOff">
                 <div class="card">
-                    <p>texto</p>
-                    <p>texto</p>
-                    <p>texto</p>
+                    <img src="img/capas/alavanque.png" class="img-card" alt="">
+                    <p>Alavanque</p>
                 </div>
                 <div class="card">
-                    <p>texto</p>
-                    <p>texto</p>
-                    <p>texto</p>
+                    <img src="img/capas/xoxocolateBuque.png" class="img-card" alt="">
+
+                   
+                    <p>XoxocolateBuquê</p>
                 </div>
                 <div class="card">
-                    <p>texto</p>
-                    <p>texto</p>
-                    <p>texto</p>
+                    <img src="img/capas/bairro.png" class="img-card" alt="">
+
+                    <p>Divulga Bairro</p>
                 </div>
             </div>
         </section>
-        <section class="container-links">
-            <h3>WhatsApp</h3>
-            <h3>Site</h3>
-            <h3>LinkedIn</h3>
-
+        <section id="container-links">
+            <a class="links" href="https://wa.me/+5521983591846" target="_blanc">
+                <button><img src="img/icons/icons-whatsapp-48.png" alt="">WhatsApp</button>
+            </a>
+            <a class="links" href="https://github.com/CarlaGRibeiro" target="_blanc"><button><img
+                        src="img/icons/icons-github-48.png" alt="">GitHub</button> </a>
+            <a class="links" href="https://www.linkedin.com/in/carla-ribeiro-ads-dev/"><button><img
+                        src="img/icons/icons8-linkedin-48.png" alt="">LinkedIn</button></a>
         </section>
     </main>
 
     <footer>
-
+        <a target="_blank" href="https://icons8.com/icon/12599/github">GitHub</a> ícone por <a target="_blank"
+            href="https://icons8.com">Icons8</a>
     </footer>
+    <script src="js/showProjects.js"></script>
 </body>
+
 </html>
