@@ -1,35 +1,52 @@
 :root {
-    --border: #ffb700;
-
+    --border5: #9e4e4e;
+    --border3: #cf8803;
+    --border: #a06902;
 }
+
 * {
     margin: 0;
     padding: 0;
 }
+
 body {
     margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
 header,
 main,
 footer {
     margin: auto;
     width: 100%;
     text-align: center;
-       
-}
-main{
-display:flex;
-flex-direction:column;
-gap:3px;
-
 }
 
+header {
+    margin-top: 0px;
+}
 
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+}
+
+main {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
 
 .perfil {
     width: 100%;
     height: 200px;
-    background-color: #ffb700;
+    background-color: var(--border);
 }
 
 .presentation {
@@ -39,75 +56,152 @@ gap:3px;
 
 .presentation>h1 {
     margin-top: -90px;
-    font-size: 8rem;
-    box-sizing: border-box;
+    font-size: 800%;
+    scroll-behavior: smooth;
+}
+
+.presentation>p {
+    width: 80%;
+    margin: auto;
+    font-size: 1.5em;
 }
 
 #container-projects {
     margin: auto;
     width: 90%;
-    height:auto;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#container-projects>button {
+    width: 101%;
+    height: 30px;
     border: 1px solid var(--border);
     border-radius: 10px;
 }
-#container-projects>button{
-    width: 100%;
-    height:30px;
-    border:1px solid var(--border);
-    border-radius: 10px;
-}
+
 .projectsOff {
     display: none;
-}
-.projectsOn{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
-    align-items:center;
-}
-#mostrar{
-    background-color: aqua;
-}
-.card {
-    width: 20%;
-    height: 200px;
-    border: 1px solid var(--border);
-    border-radius: 5px;
+    border: none;
 }
 
-
-.img-card {
-    width:90%;
-    height:80%;
-
-}
-#container-links{
-    display:flex;
-    flex-direction:column;
-    margin:auto;
-    width:90%;
-    border-radius: 10px;
-    gap:3px;
-  
-}
-.links{
-    text-decoration: none;
-   
-}
-button, .links>button{
-    width: 100%;
-    height:30px;
-    border:1px solid var(--border);
-    border-radius: 10px;
-    display:flex;
+.projectsOn {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    text-decoration:none; 
-    cursor:pointer;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
-button>img{
-    width:25px;
-    height:25px;
-    
+
+.card {
+    width: 250px;
+    height: 250px;
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.603);
+}
+
+.card>h4 {
+    color: var(--border);
+}
+
+.card>img {
+    width: 80%;
+    height: 50%;
+}
+
+.card>a {
+    width: 90%;
+    text-decoration: none;
+}
+
+#container-links {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+    border-radius: 10px;
+    gap: 3px;
+
+}
+
+.links {
+    text-decoration: none;
+
+}
+
+button,
+.links>button {
+    width: 100%;
+    height: 30px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button>img {
+    width: 25px;
+    height: 25px;
+
+}
+
+footer {
+    background-color: var(--border);
+    height: 13vh;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3%;
+    font-size: 80%;
+    color: white;
+}
+
+footer>.credits>a>img {
+    text-decoration: none;
+    color: black;
+    width: 20px;
+    height: 20px;
+}
+
+@media(max-width:775px) {
+    .presentation>h1 {
+        margin-top: -45px;
+        font-size: 400%;
+    }
+
+    .presentation>p {
+        margin: auto;
+        font-size: 1.2em;
+    }
+
+    footer {
+        height: 12vh;
+        font-size: 0.7em;
+        gap: 0%;
+    }
+}
+
+@media(max-width:400px) {
+    .presentation>h1 {
+        margin-top: -28px;
+        font-size: 250%;
+    }
 }
