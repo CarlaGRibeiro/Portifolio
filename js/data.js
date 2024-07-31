@@ -2,21 +2,21 @@ const url = "../img/capas/";
 
 const projectsList = [
   {
-    id: 1,
+    id: 0,
     img: url + "0.png",
     txtAlt: "Imagem com o nome do projeto escrito: Alavanque",
     projeto: "Alavanque",
     linkFuncional: "https://carlagribeiro.github.io/Alavanque",
   },
   {
-    id: 2,
+    id: 1,
     img: url + "1.png",
     txtAlt: "Imagem com o nome do projeto escrito: Divulga Bairro",
     projeto: "Divulga Bairro",
     linkFuncional: "b",
   },
   {
-    id: 3,
+    id: 2,
     img: url + "2.png",
     txtAlt: "Imagem com o nome do projeto escrito: Xoxocolate Buquê",
     projeto: "Xoxocolate Buquê",
@@ -33,10 +33,10 @@ const projectsList = [
 
 
 projectsList.map((project)=>{
-   let card= `<div id="${project.id}">
-      <p id="project-p">${project.projeto} </p>
+   let card= `<div id="${project.id}" class="card">
+      <h4 id="project-p">${project.projeto} </h4>
       <img id="project-img"src="${project.img}"> 
-      <button id="project-btn-go"><a href="${project.linkFuncional}">Ver o projeto.</a> </button>
+      <a href="${project.linkFuncional}" target="_blank"><button id="project-btn-go">Ver o projeto.</button></a> 
    </div>`
   document.getElementById('projectsList').innerHTML +=card;
 }
